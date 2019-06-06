@@ -12,7 +12,7 @@ Weather::Weather(std::string nm, GPS loc) :
 }
 
 
-string Weather::get_name() {
+string Weather::get_name() const {
     return station_nm;
 }
 
