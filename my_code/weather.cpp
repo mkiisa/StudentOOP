@@ -4,6 +4,75 @@
 
 using namespace std;
 
+const double F_TO_C = 5 / 9;
+const double C_TO_F = 9 / 5;
+
+Image::Image(int w, int h, std::string flnm)
+    : width(w), height(h)
+{
+    filename = flnm;
+    image_buf = new char[image_sz()];
+}
+
+// copy constructor:
+Image::Image(const Image& img2) {
+    copy_fields(img2);
+}
+
+// destructor
+Image::~Image() {
+    delete width;
+    delete height;
+    if (image_buf != nullptr) delete image_buf;
+    delete filename;
+}
+
+// assignment operator:
+Image& Image::operator=(const Image& img2) {
+    delete width;
+    delete height;
+    if (image_buf != nullptr) delete image_buf;
+    delete filename;
+    copy_fields(img2)
+    return *this
+}
+
+int Image::image_sz() {
+    return width * height;
+}
+
+
+void Image::copy_fields(const Image& img2) {
+    width = img2.get_width();
+    height = img2.get_height();
+    image_buf = new char[image_sz()]
+    
+    
+}
+
+
+    /*
+     * Setting `display() = 0` here makes this an abstract
+     * class that can't be implemented.
+     * */
+string Image::display(std::string s) {
+    return "Displaying image " + s;
+}
+
+
+
+Date::Date(int d, int m, int y) {
+    day = d;
+    month = m;
+    year = y;
+}
+
+
+double WReading::get_tempF() {
+    return (temperature * C_TO_F) + 32;
+}
+
+
 /*
  * A constructor for weather class.
  * */
@@ -16,3 +85,4 @@ string Weather::get_name() const {
     return station_nm;
 }
 
+void Weather::add_reading(WReading wr) { }
