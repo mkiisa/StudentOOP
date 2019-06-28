@@ -97,7 +97,10 @@ bool del_tail(Node*& curr) {
  * Duplicate the entire list -- you must not share memory!
  * */
 Node* duplicate(Node* head) {
-    return nullptr;
+    if (!(head->next)) return new Node(head->data,nullptr);
+    else {
+        new_head = new Node(head->data,head->)
+    }
 }
 
 /*
