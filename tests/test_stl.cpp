@@ -172,5 +172,5 @@ int main() {
     cout << "First lambda odd number in ilist is: " << *odd_iter3 << endl;
     odd_iter3++;
     
-    // cout << "First lambda odd number in list is: " << *if_iter3 << endl;
+    cout << "First lambda odd number in list is: " << *if_iter3 << endl;
 }

@@ -36,9 +36,9 @@ test_templ_ll: $(TEST_DIR)/test_templ_ll
 
 $(TEST_DIR)/test_templ_ll: $(TEST_DIR)/test_templ_ll.cpp
 
-# test_tvector: $(TEST_DIR)/test_tvector
+test_tvector: $(TEST_DIR)/test_tvector
 
-# $(TEST_DIR)/test_tvector: $(TEST_DIR)/test_tvector.cpp
+$(TEST_DIR)/test_tvector: $(TEST_DIR)/test_tvector.cpp
 
 test_stl: $(TEST_DIR)/test_stl
 
