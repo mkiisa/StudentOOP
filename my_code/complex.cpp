@@ -1,6 +1,7 @@
 #include <iostream>
 #include <istream>
 #include <iomanip>
+#include <cmath>
 #include "complex.h"
 
 using namespace std;
@@ -71,7 +72,7 @@ Complex Complex::operator*(const int i) {
 }
 
 bool operator== (const Complex& c1, const Complex& c2) {
-    return (c1.get_real() == c2.get_real()) && (c2.get_imag() == c1.get_imag());
+    return (abs(c1.get_real() - c2.get_real()) < 0.0001) && (abs(c2.get_imag() - c1.get_imag()) < 0.0001);
 }
 
 bool operator!= (const Complex& c1, const Complex& c2) {

@@ -36,6 +36,8 @@ int main() {
     assert(c3.get_real() > 43.2);
     // see if `Complex` subtraction works:
     c3 -= c2;
+    cout << c3 << ", " << c1 << endl;
+    cout << (c3 == c1) << endl;
     assert(c3 == c1);
 
     Complex c4 = Complex();
