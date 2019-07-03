@@ -34,7 +34,7 @@ int main() {
     Node<string>* sreversed = reverse(shead, (Node<string>*)nullptr);
     cout << "Reversed string list: \n";
     print_list(cout, sreversed);
-
+//
     Node<double>* dhead = nullptr;
     dhead = new Node<double>(34.2, nullptr);
     add_at_end(dhead, 65.4);

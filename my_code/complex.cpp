@@ -58,6 +58,12 @@ Complex Complex::operator--(int dummy) {
     return temp;
 }
 
+Complex& Complex::operator-=(const Complex& c) {
+    real -= c.get_real();
+    imag -= c.get_imag();
+    return *this;
+}
+
 Complex Complex::operator*(const int i) {
     Complex temp(real * i,imag * i);
     return temp;
@@ -86,3 +92,5 @@ Complex operator-(const Complex& c1, const Complex& c2) {
     Complex temp(c1.get_real() - c2.get_real(),c1.get_imag() - c2.get_imag());
     return temp;
 }
+
+

@@ -57,10 +57,10 @@ int main() {
     assert(lastp->data == 128);
 
 // now join the reversed list on to the end of the original list:
-//    head = join(head, reversed);
-//    cout << "Joined lists: \n";
-//    print_list(cout, head);
-//    lastp = last(head);
-//    assert(lastp->data == 8);
+    head = join(head, reversed);
+    cout << "Joined lists: \n";
+    print_list(cout, head);
+    lastp = last(head);
+    assert(lastp->data == 8);
 
 }

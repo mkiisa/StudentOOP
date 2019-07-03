@@ -99,7 +99,13 @@ bool del_tail(Node*& curr) {
 Node* duplicate(Node* head) {
     if (!(head->next)) return new Node(head->data,nullptr);
     else {
-        new_head = new Node(head->data,head->)
+        Node* new_head = new Node(head->data,nullptr);
+        Node* cursor = head->next;
+        while (cursor) {
+            add_at_end(new_head, cursor->data);
+            cursor = cursor->next;
+        }
+        return new_head;
     }
 }
 
@@ -112,6 +118,22 @@ Node* reverse(Node* curr, Node* new_next) {
     else {
         return reverse(curr->next, new Node(curr->data, new_next));
     }
+}
+
+Node* join(Node*& list1, Node* list2) {
+    Node* joined_lst = new Node(list1->data,nullptr);
+    Node* cursor = list1->next;
+    while (cursor) {
+        add_at_end(joined_lst, cursor->data);
+        cursor = cursor->next;
+    }
+    Node* cursor2 = list2;
+    while (cursor2) {
+        add_at_end(joined_lst, cursor2->data);
+        cursor2 = cursor2->next;
+    }
+    return joined_lst;
+    
 }
 
 
